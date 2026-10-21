@@ -19,7 +19,7 @@ El portafolio está pensado para **personas que quieren encargarme un dibujo** (
 
 ## Tecnologías
 
-- HTML5 semántico
+- HTML5 semántico visto en clases de frontend
 - CSS3 externo (variables, Grid, Flexbox, media queries, animaciones con `@keyframes`)
 - JavaScript básico con IA, solo para detalles extra: visor de imágenes, calculadora de precio y vista previa responsiva. El sitio se entiende sin JS.
 - Tipografía **Domine** (Google Fonts)
