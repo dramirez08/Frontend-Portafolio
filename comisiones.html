@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Precios, calculadora y solicitud de comisiones de dibujo de Danna.">
+  <title>Comisiones de Dibujo | Danna</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Domine:wght@400..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a href="#contenido-principal" class="skip-link">Saltar al contenido</a>
+
+  <header>
+    <div class="header-container">
+      <h1>Comisiones de Dibujo</h1>
+      <nav aria-label="Navegación principal">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-btn">← Volver al portafolio</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido-principal">
+    <div class="contenedor">
+    <section id="precios" tabindex="-1">
+      <h2>Tabla de Precios</h2>
+      <div class="tabla-scroll">
+        <table>
+          <caption>Precios base por tipo de dibujo y técnica</caption>
+          <thead>
+            <tr>
+              <th scope="col">Tipo</th>
+              <th scope="col">Digital</th>
+              <th scope="col">Tradicional</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">Icono</th><td>$5.000</td><td>$6.000</td></tr>
+            <tr><th scope="row">Cuerpo Medio</th><td>$8.000</td><td>$9.000</td></tr>
+            <tr><th scope="row">Cuerpo Completo</th><td>$10.000</td><td>$11.000</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="solicitud" tabindex="-1">
+      <h2>Solicita tu Comisión</h2>
+      <form id="formulario" class="form-comision">
+        <div class="campo-grupo">
+          <div class="campo-form">
+            <label for="usuario">Usuario</label>
+            <input type="text" id="usuario" name="usuario" required autocomplete="off">
+          </div>
+          <div class="campo-form">
+            <label for="red">Red social</label>
+            <select id="red" name="red">
+              <option>Discord</option>
+              <option>Instagram</option>
+              <option>TikTok</option>
+            </select>
+          </div>
+        </div>
+
+        <fieldset>
+          <legend>Calculador de precio</legend>
+          <div class="campo-grupo">
+            <div class="campo-form">
+              <label for="tipo">Tipo de dibujo</label>
+              <select id="tipo" name="tipo">
+                <option value="5000">Icono - Digital</option>
+                <option value="6000">Icono - Tradicional</option>
+                <option value="8000">Cuerpo Medio - Digital</option>
+                <option value="9000">Cuerpo Medio - Tradicional</option>
+                <option value="10000">Cuerpo Completo - Digital</option>
+                <option value="11000">Cuerpo Completo - Tradicional</option>
+              </select>
+            </div>
+            <div class="campo-form">
+              <label for="detalles">Estilo de color</label>
+              <select id="detalles" name="detalles">
+                <option value="0">Color Base</option>
+                <option value="1000">Con Sombras (+$1.000)</option>
+                <option value="2000">Renderizado (+$2.000)</option>
+              </select>
+            </div>
+          </div>
+          <p class="total">Total: <output id="total" for="tipo detalles">$5.000</output></p>
+        </fieldset>
+
+        <div class="campo-form">
+          <label for="descripcion">Descripción de la idea</label>
+          <textarea id="descripcion" name="descripcion" rows="4" required></textarea>
+        </div>
+
+        <div class="campo-form">
+          <label for="pago">Método de pago</label>
+          <select id="pago" name="pago">
+            <option>Transferencia</option>
+            <option>Mercado Pago</option>
+            <option>Paypal</option>
+          </select>
+        </div>
+
+        <p id="mensaje" class="mensaje" role="alert"></p>
+        <button type="submit" class="btn-solicitar">Enviar solicitud</button>
+      </form>
+    </section>
+
+    <section id="slots-seccion" tabindex="-1">
+      <h2>🧷 Slots Disponibles</h2>
+      <p id="estado-slots" aria-live="polite">Slots usados: 0 de 3</p>
+      <ol id="slots" class="slots"></ol>
+    </section>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Danna | Ilustraciones y comisiones</p>
+  </footer>
+
+  <script src="js/comisiones.js"></script>
+  <script src="js/vista-previa.js"></script>
+</body>
+</html>
